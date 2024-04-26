@@ -1,0 +1,261 @@
+/*reseteo de valores*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+/*configuracion de variables*/
+:root{
+    --main-color: #f3f3f3;
+    --secondary-color: #161516;
+    --third-color: #2f2dd1;
+    --third-color-t: #4565f7d2;
+    --font-weight-bold: 700;
+}
+/*estilos del body*/
+body{
+    background-color: var(--secondary-color);
+    color: var(--main-color);
+}
+*::-webkit-scrollbar{
+    width: 10px;
+    background-color: var(--secondary-color);
+}
+*::-webkit-scrollbar-thumb{
+    background-color: var(--third-color);
+    border-radius: 10px;
+    
+}
+/*generalidades*/
+h1{
+    font-size: 4rem;
+}
+h2{
+    font-size: 2.5rem;
+}
+h1,h2{
+    font-weight: --font-weight-bold;
+    margin-bottom: 20px;
+}
+/*media querys para dispositivos hasta 800px para el h1 y h2*/
+@media screen and (max-width: 800px) {
+    h1{
+        font-size: 2.2rem;
+    }
+    h2{
+        font-size: 1.8rem;
+    }
+
+}
+
+header,footer{
+    background-color: var(--third-color);
+    color: var(--main-color);
+    padding: 20px;
+}
+/*estilos del header*/
+
+.header{
+    height: 4em;
+    position:sticky;
+    top:0; 
+    z-index: 10; 
+    nav{
+        height: 100%;
+        display:flex;
+        align-items: center;
+        justify-content: space-between;
+        a{
+            text-decoration: none;
+            color: var(--main-color);
+            font-size:1.6rem;
+        }
+        ul{
+            list-style: none;
+            display:flex;
+            column-gap: 20px;
+            a{
+                font-size:1.1rem;
+            }
+           
+        }
+    }
+}
+@media screen and (max-width: 800px) {
+   .header{
+      height:initial;
+      nav{
+        flex-direction: column;
+        row-gap: 20px;
+        ul{
+            flex-direction: column;
+            row-gap: 10px;
+        }
+      }
+
+   }
+    
+}
+/*main
+estilos seccion principal
+*/
+.sectionTitulos{
+    height: 85vh;
+    background:linear-gradient(to bottom, #000000a3, #000000a3),url("../assets/img/banner-bg.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    .contenedorTitulos{
+        text-align: center;
+        /*efecto blur a un contenedor*/
+        backdrop-filter: blur(8px);
+        width: 60%;
+        margin:0 auto;
+        border-radius: 5px;
+        a{
+            margin-top: 20px;
+            display: inline-block;
+            text-decoration: none;
+            border:2px solid var(--main-color);
+            padding:10px 20px;
+        }
+    }
+}
+@media screen and (max-width: 800px) {
+    .sectionTitulos{
+        height: 75vh;
+        background:linear-gradient(to bottom, #000000a3, #000000a3),url("../assets/img/bg_mobile.jpg");
+        .contenedorTitulos{
+            width: 90%;
+            backdrop-filter:initial;
+            
+        }
+    }
+  
+}
+
+/*buscador*/
+.searchMovies{
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+}
+/*estilos generales*/
+.btn-primary{
+    background-color: var(--third-color);
+    color: var(--main-color);
+    padding: 0.5rem 1.5rem;
+    border-radius: 1.5rem;
+    border: transparent;
+    font-size: 1.5em;
+    cursor: pointer;
+    &:hover{
+        background-color: var(--third-color-t);
+    }
+}
+
+.input-search{
+    width: 27rem;
+    font-size: 1.5em;
+    padding: 0.5rem;
+    border-radius: 1.5em;
+
+}
+.peliculasTendencias{
+    width: 80%;
+    margin:0 auto;
+    text-align: center;
+    h2{
+        margin-top:50px;
+        margin-bottom:20px;
+    }
+    .galeriaTendencias{
+        display:flex;
+        justify-content: space-evenly;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+        div{
+            width: 250px;
+            height: 350px;
+            box-shadow: 10px 10px 47px -6px rgba(165, 37, 37, 0.42);
+            border-radius: 5px;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 5px;
+            }
+        }
+    }
+    button{
+       margin-bottom:20px;
+    }
+}
+/*estilos de section peliculas aclamadas*/
+.peliculasAclamadas{
+    width: 80%;
+    margin:0 auto;
+    margin-bottom: 20px;
+    text-align: center;
+    h2{
+        margin-top:50px;
+        margin-bottom:20px;
+    }
+    .galeriaAclamadas{
+        height: 380px;
+        overflow: auto;
+        display: flex;
+        column-gap: 30px;
+        div{
+            width: 220px;
+            height: 350px;
+            flex-shrink: 0;
+            box-shadow: 10px 10px 47px -45px rgba(255,255,255,0.29);
+           
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 5px;
+            }
+        }
+    }
+}
+footer{
+    background-color:#3734f3d7;
+    color:#ffffff;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    
+ul{
+    list-style: none;
+    display: flex;
+    column-gap: 20px;
+}
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.irArriba{
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
