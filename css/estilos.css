@@ -60,7 +60,9 @@ header,footer{
     height: 4em;
     position:sticky;
     top:0; 
-    z-index: 10; 
+    z-index: 10;
+    background: rgb(5,0,87);
+    background: linear-gradient(90deg, rgba(5,0,87,1) 0%, rgba(8,8,126,1) 35%, rgba(38,152,175,1) 100%);
     nav{
         height: 100%;
         display:flex;
@@ -258,4 +260,76 @@ a {
     border-radius: 5px;
     font-size: 1.2rem;
     cursor: pointer;
+}
+/*seccion de registrarse.html*/
+.main{
+    height: 100vh;
+    display: flex;
+}
+.seccionRegistrarse
+{
+    background-color:rgb(42, 42, 42);
+    width: 40%;
+    border-radius: 10px;
+    padding: 20px 20px;
+    margin: auto;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    font-size:1.2rem;
+    .tituloRegistrarse
+    {
+        font-size: 1.7rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+    /*seleccionar todos los input menos el checkbox*/
+    form{
+        width: 100%;
+        padding:40px;
+        input:not(.check,.boton),select{
+            width: 100%;
+            margin-bottom: 10px;
+            height: 40px;
+            padding: 0px 20px;
+            font-size: 1.2rem;
+            border-radius: 20px;
+            border: 2px solid var(--third-color);
+            background-color: #333333;
+            outline: none;
+            color:rgb(255, 255, 255);
+        }
+        .error input:not(.check,.boton),.error select{
+            border: 1px solid #ff0000;
+        }
+        .error-text{
+            color: #ff0000;
+            font-size: 0.8rem;
+            margin-top:0px;
+            margin-bottom: 10px;
+        }
+      
+        .terminos{
+            font-size: 0.8rem;
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            .textoCheck{
+                margin-left: 10px;
+            }
+        }
+        .button{
+           width: 100%;
+        }
+        .ayuda{
+            margin-top:40px;
+            font-size: 1rem;
+            text-decoration: none;
+            color: #787878;
+            font-weight:400;
+           
+        }
+    }
+   
 }

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro | MOVIELAND</title>
+    <title>Registro | Movieland</title>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
     <link rel="stylesheet" href="../css/estilos.css">
     <script src="https://kit.fontawesome.com/f7fb471b65.js" crossorigin="anonymous"></script>
@@ -11,14 +11,22 @@
     <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
 </head>
 <body class="bodyRegistrarse">
-    <header class="headerRegistrarse">
-        <a class="anclaLogo" href="../index.html">
-            <i class="fas fa-film" aria-hidden="true"></i>
-            <span>Movieland</span>
-        </a>
+    <header class="header" >
+        <nav >
+            <a href="#">
+                <i class="fas fa-film" aria-hidden="true"></i>
+                <span>Movieland</span>
+            </a>
+            <ul >
+                <li ><a  href="../index.html#tendencias">Tendencias</a></li>
+                <li ><a  href="../pages/registrarse.html">Registrarse</a></li>
+                <li ><a  href="../pages/iniciosesion.html">Iniciar Sesión</a></li>
+            </ul>
+        </nav>
     </header>
     <main id="main" class="main">
-        <section>
+        <section class="seccionRegistrarse">
+            <a href="/index.html"><h2>Movieland</h2></a>
             <form action="" method="get">
                 <h2 class="tituloRegistrarse">Registro</h2>
                 <div>
@@ -63,11 +71,9 @@
                     <div class="error-text"></div>
                 </div>
                 <div>
-                    <input class="boton" type="submit" value="Registrarse">
+                    <button class="btn-primary" type="submit" >Registrarse</button>
                 </div>
-                <div>
                     <a class="ayuda" href="#">Necesitas ayuda?</a>
-                </div>
             </form>
         </section>
     </main>
