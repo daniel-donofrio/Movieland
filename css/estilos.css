@@ -7,7 +7,7 @@
 }
 /*configuracion de variables*/
 :root{
-    --main-color: #f3f3f3;
+    --main-color: #F4EEEE;
     --secondary-color: #161516;
     --third-color: #2f2dd1;
     --third-color-t: #4565f7d2;
@@ -27,6 +27,17 @@ body{
     border-radius: 10px;
     
 }
+.bodyForms{
+    height: 100vh;
+    background-image: url("../assets/img/background.jpg");
+    background-size: cover;
+    a:first-child{
+        display: inline-block;
+        text-decoration:none;
+        font-size: 1.6rem;
+        margin: 20px;
+    }
+}
 /*generalidades*/
 h1{
     font-size: 4rem;
@@ -37,9 +48,9 @@ h2{
 h1,h2{
     font-weight: --font-weight-bold;
     margin-bottom: 20px;
-}
+} 
 /*media querys para dispositivos hasta 800px para el h1 y h2*/
-@media screen and (max-width: 800px) {
+@media (max-width: 768px) {
     h1{
         font-size: 2.2rem;
     }
@@ -54,8 +65,8 @@ header,footer{
     color: var(--main-color);
     padding: 20px;
 }
-/*estilos del header*/
 
+/*estilos del header*/
 .header{
     height: 4em;
     position:sticky;
@@ -84,20 +95,36 @@ header,footer{
         }
     }
 }
-@media screen and (max-width: 800px) {
-   .header{
-      height:initial;
-      nav{
-        flex-direction: column;
-        row-gap: 20px;
-        ul{
-            flex-direction: column;
-            row-gap: 10px;
-        }
-      }
 
-   }
-    
+/* estilos para header en mobile Y tablet */
+@media (max-width: 768px) {
+    .header{
+        height: initial;
+        .navegacion{
+            margin-left:10px;
+            margin-right: 10px;
+            flex-direction: column;
+            row-gap: 20px;
+            .anclaLogo{
+                font-size: 1.2rem;
+                font-weight:700;
+            }
+            .listaNav{
+               
+                padding:initial;
+                .listaItem{
+                    .linkNav{
+                        font-weight: 400;
+                        margin-right: initial;
+                        font-size: 1rem;
+                        padding: 0.2rem;
+                        
+                    }
+                  
+                }
+            }
+        }
+    }
 }
 /*main
 estilos seccion principal
@@ -263,13 +290,12 @@ a {
 }
 /*seccion de registrarse.html*/
 .main{
-    height: 100vh;
     display: flex;
 }
 .seccionRegistrarse
 {
-    background-color:rgb(42, 42, 42);
-    width: 40%;
+    background-color: var(--main-color);
+    width: 30%;
     border-radius: 10px;
     padding: 20px 20px;
     margin: auto;
@@ -278,58 +304,211 @@ a {
     justify-content: center;
     align-items: center;
     font-size:1.2rem;
-    .tituloRegistrarse
-    {
-        font-size: 1.7rem;
-        font-weight: 700;
-        margin-bottom: 20px;
+    color: #161516;
+    box-shadow: 10px 10px 26px 4px rgba(0,0,0,0.4);;
+    
+    h2{
+        text-align: center;
+        margin-bottom: 0px;
     }
-    /*seleccionar todos los input menos el checkbox*/
+    a{
+        display: block;
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 1rem;
+        color: #161516;
+    }
+    a:hover{
+        color: #2f2dd1;
+        font-weight: bold;
+    }
+    
     form{
         width: 100%;
         padding:40px;
-        input:not(.check,.boton),select{
+        div{
+            margin-bottom: 20px;
+        }
+        input{
             width: 100%;
-            margin-bottom: 10px;
             height: 40px;
             padding: 0px 20px;
             font-size: 1.2rem;
             border-radius: 20px;
             border: 2px solid var(--third-color);
-            background-color: #333333;
-            outline: none;
-            color:rgb(255, 255, 255);
-        }
-        .error input:not(.check,.boton),.error select{
-            border: 1px solid #ff0000;
+            background-color:var(--main-color);
+            color:#161516;
         }
         .error-text{
-            color: #ff0000;
             font-size: 0.8rem;
             margin-top:0px;
-            margin-bottom: 10px;
-        }
-      
-        .terminos{
-            font-size: 0.8rem;
-            display: flex;
-            align-items: center;
             margin-bottom: 20px;
-            .textoCheck{
-                margin-left: 10px;
-            }
+            font-weight: 900; 
         }
-        .button{
+        .input-error{
+            border: 3px solid red;
+        }
+        button{
            width: 100%;
+           margin-bottom: 10px;
         }
-        .ayuda{
-            margin-top:40px;
-            font-size: 1rem;
-            text-decoration: none;
-            color: #787878;
-            font-weight:400;
-           
-        }
+
+        
     }
    
+}
+
+/* estilos pagina de detalles */
+.mainDetalle{
+    
+    .detalle{
+        padding-top:50px;
+        background:linear-gradient(to right top, #6d6969a7, #6d6969a7),url("../assets/img/mario-bg.jpg");
+        background-size: cover;
+        background-position: center;
+        height: 70vh;
+        .contenedorDetalle{
+            width:75%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            column-gap: 60px;
+            img{
+              border-radius: 20px;
+            }
+            .textoDetalle{
+                h1{
+                    font-size: 2.2rem;
+                    font-weight: 700;
+                }
+                h2{
+                    margin-top:20px;
+                }
+                .contenedorCreditos{
+                    margin-top:20px;
+                    display: flex;
+                    justify-content:space-between;
+                }
+            }
+        }
+        
+        
+       
+    }
+    .trailer{
+        padding-top:150px;
+        padding-bottom: 100px;
+        width:75%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: 70px;
+        .contenedorInfo{
+            .redes{
+                margin-bottom: 20px;
+                ul{
+                    list-style: none;
+                    display: flex;
+                    column-gap: 20px;
+                    li{
+                        a{
+                            text-decoration: none;
+                            color: #ffffff;
+                            font-size: 2.5rem;
+                            margin-right: 50px;
+                        }
+                    }
+                  
+                }
+            }
+            .info{
+                table{
+                    width: 100%;
+                    tr{
+                        td{
+                            font-size: 1.2rem;
+                            padding: 10px 0px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* estilos mobile y tablet para pagina de detalles */
+@media screen and (max-width:1200px){
+    .mainDetalle{
+        .detalle{
+            height: initial;
+            .contenedorDetalle{
+                flex-direction: column;
+                row-gap: 20px;
+                img{
+                    width: 100%;
+                    height: 300px;
+                }
+                .textoDetalle{
+                    h1{
+                        font-size: 1.5rem;
+                    }
+                    h2{
+                        font-size: 1rem;
+                    }
+                    .contenedorCreditos{
+                        flex-direction: column;
+                        row-gap: 10px;
+                    }
+                }
+            }
+        }
+        .trailer{
+            width:95%;
+            padding-top:50px;
+            padding-bottom: 50px;
+            flex-direction: column;
+            row-gap: 20px;
+            .contenedorTrailer{
+                width: 100%;
+                h2{
+                    margin-bottom: 20px;
+                }
+                iframe{
+                    width: 100%;
+                    height: 300px;
+                
+                }
+            }
+            .contenedorInfo{
+                width: 100%;
+                .redes{
+                    width: 100% ;
+                    ul{
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-between;
+                       
+                        li{
+                            a{
+                                font-size: 2rem;
+                                margin-right: 20px;
+                            }
+                        }
+                    }
+                }
+                .info{
+                    table{
+                        tr{
+                            td{
+                                font-size: 1rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

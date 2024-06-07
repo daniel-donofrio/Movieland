@@ -10,43 +10,34 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
 </head>
-<body class="bodyRegistrarse">
-    <header class="header" >
-        <nav >
-            <a href="../index.html">
-                <i class="fas fa-film" aria-hidden="true"></i>
-                <span>Movieland</span>
-            </a>
-            <ul >
-                <li ><a  href="../index.html#tendencias">Tendencias</a></li>
-                <li ><a  href="../pages/registrarse.html">Registrarse</a></li>
-                <li ><a  href="../pages/iniciosesion.html">Iniciar Sesión</a></li>
-            </ul>
-        </nav>
-    </header>
+<body class="bodyForms">
+    <a href="../index.html">
+        <i class="fas fa-film" aria-hidden="true"></i>
+        <span>Movieland</span>
+    </a>
     <main id="main" class="main">
         <section class="seccionRegistrarse" >
-            <a href="/index.html"><h2>Movieland</h2></a>
             <!--pongo get ya que en github pages da error el method post-->
-            <form action="" method="get">
+            <form id="formulario" onsubmit="return validarLogin()">
                 <h2 class="tituloRegistrarse">Iniciar Sesión</h2>
+                <a href="../index.html">Volver al inicio</a>
                 <div>
-                    <input type="email" placeholder="Email" id="email" name="email">
-                    <div class="error-text"></div>
+                    <input type="text" placeholder="Email" id="email" name="email">
+                    <span id="errorEmail" class="error-text"></span>
                 </div>
                 <div>
-                    <input type="password" placeholder="Contraseña" id="password" name="password">
-                    <div class="error-text"></div>
+                    <input type="password" placeholder="Contraseña" id="password" name="password" >
+                    <span id="errorPass" class="error-text"></span>
                 </div>
                 <div>
-                    <button class="btn-primary" type="submit">Iniciar Sesion</button> 
+                    <button class="btn-primary" type="submit">Ingresar</button> 
                 </div>
-                <div>
-                    <a id="ayuda" class="ayuda" href="registrarse.html">Registrarse</a>
-                </div>
+                
+                <a href="registrarse.html">¿No tienes cuenta? Registrate</a>
+                
             </form>
         </section>
     </main>
-   
+   <script src="../js/validaciones.js"></script>
 </body>
 </html>

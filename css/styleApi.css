@@ -1,0 +1,18 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #161516;
+}
+.movie {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: teal;
+}
+.movie img {
+    width: 100px;
+    margin-right: 20px;
+}
+.movie-details {
+    max-width: 600px;
+}
