@@ -407,6 +407,7 @@ a {
         background-size: cover;
         background-position: center;
         height: 70vh;
+
         .contenedorDetalle{
             width:75%;
             margin: 0 auto;
@@ -414,6 +415,7 @@ a {
             justify-content: center;
             align-items: center;
             column-gap: 60px;
+            
             img{
               border-radius: 20px;
             }
