@@ -48,7 +48,10 @@ h2{
 h1,h2{
     font-weight: --font-weight-bold;
     margin-bottom: 20px;
-} 
+}
+a {
+    text-decoration: none;
+}
 /*media querys para dispositivos hasta 800px para el h1 y h2*/
 @media (max-width: 768px) {
     h1{
@@ -96,10 +99,21 @@ header, footer{
            
         }
     }
+    .tituloCrud{
+        margin-left: 20px;
+        font-size: 1.6rem;
+        font-weight: 500;
+        color: var(--main-color);
+     }
+}
+
+.logoLogin{
+    color: var(--main-color);
+    font-size:1.6rem;
 }
 
 /* estilos para header en mobile Y tablet */
-@media (max-width: 768px) {
+@media (max-width: 860px) {
     .header{
         height: initial;
         .navegacion{
@@ -269,6 +283,11 @@ footer{
     align-items: center !important;
 }
 
+.aFooter {
+    text-decoration: none;
+    color: #ffffff;
+}
+
 .administradorPeliculas{
     background-color: #181419;
     color: white;
@@ -279,11 +298,6 @@ ul{
     list-style: none;
     display: flex;
     column-gap: 20px;
-}
-
-a {
-    text-decoration: none !important;
-    color: #ffffff !important;
 }
 
 .irArriba{
