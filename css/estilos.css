@@ -343,21 +343,23 @@ a {
     align-items: center;
     font-size:1.2rem;
     color: #161516;
-    box-shadow: 10px 10px 26px 4px rgba(0,0,0,0.4);;
+    box-shadow: 10px 10px 26px 4px rgba(0,0,0,0.4);
     
     h2{
         text-align: center;
         margin-bottom: 0px;
     }
-    a{
+
+    .a-login {
         display: block;
         text-align: center;
         margin-bottom: 20px;
         font-size: 1rem;
-        color: #161516;
+        color: #161516 !important;
     }
-    a:hover{
-        color: #2f2dd1;
+
+    .a-login:hover{
+        color: #2f2dd1 !important;
         font-weight: bold;
     }
     

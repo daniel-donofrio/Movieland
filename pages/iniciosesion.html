@@ -15,12 +15,12 @@
         <i class="fas fa-film" aria-hidden="true"></i>
         <span>Movieland</span>
     </a>
-    <main id="main" class="main">
+    <main id="main" class="main-login">
         <section class="seccionRegistrarse" >
             <!--pongo get ya que en github pages da error el method post-->
             <form id="formulario" onsubmit="return validarLogin()">
                 <h2 class="tituloRegistrarse">Iniciar Sesión</h2>
-                <a href="../index.html">Volver al inicio</a>
+                <a class="a-login" href="../index.html">Volver al inicio</a>
                 <div>
                     <input type="text" placeholder="Email" id="email" name="email">
                     <span id="errorEmail" class="error-text"></span>
@@ -33,7 +33,7 @@
                     <button class="btn-primary" type="submit">Ingresar</button> 
                 </div>
                 
-                <a href="registrarse.html">¿No tienes cuenta? Registrate</a>
+                <a class="a-login" href="registrarse.html">¿No tienes cuenta? Registrate</a>
                 
             </form>
         </section>
