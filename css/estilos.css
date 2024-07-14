@@ -60,11 +60,13 @@ h1,h2{
 
 }
 
-header,footer{
-    background-color: var(--third-color);
-    color: var(--main-color);
+header, footer{
+    background-color: var(--third-color) !important;
+    color: var(--main-color) !important;
     padding: 20px;
 }
+
+
 
 /*estilos del header*/
 .header{
@@ -260,12 +262,12 @@ estilos seccion principal
     }
 }
 footer{
-    background-color:#3734f3d7;
-    color:#ffffff;
-    height: 15vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-color:#3734f3d7 !important;
+    color:#ffffff !important;
+    height: 15vh !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
 }
     
 ul{
@@ -273,9 +275,10 @@ ul{
     display: flex;
     column-gap: 20px;
 }
+
 a {
-    text-decoration: none;
-    color: #ffffff;
+    text-decoration: none !important;
+    color: #ffffff !important;
 }
 
 .irArriba{
