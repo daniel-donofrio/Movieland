@@ -262,14 +262,19 @@ estilos seccion principal
     }
 }
 footer{
-    background-color:#3734f3d7 !important;
     color:#ffffff !important;
     height: 15vh !important;
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
 }
-    
+
+.administradorPeliculas{
+    background-color: #181419;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
 ul{
     list-style: none;
     display: flex;
