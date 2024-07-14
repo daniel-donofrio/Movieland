@@ -292,6 +292,35 @@ a {
 .main{
     display: flex;
     flex-direction: column;
+    background-color: var(--secondary-color);
+    .sectionFormulario
+    {
+        color:white;
+        width: 60%; 
+        margin: auto;
+    }
+    .sectionFormularioTabla
+    {
+        color:white;
+        width: 60%; 
+        margin: auto; 
+    }
+
+    th, td {
+        border: 1px solid #2f2dd1;
+        padding: 8px;
+        text-align: left;
+    }
+    th {
+        background-color: #2f2dd1; /* Fondo negro para resaltar el texto blanco */
+        color: white ; /* Texto en blanco */
+        text-align: center;
+    }
+
+    td {
+        color: white; /* Texto en blanco */
+        text-align: center;
+    }
 }
 .seccionRegistrarse
 {
