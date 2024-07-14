@@ -291,6 +291,7 @@ a {
 /*seccion de registrarse.html*/
 .main{
     display: flex;
+    flex-direction: column;
 }
 .seccionRegistrarse
 {
